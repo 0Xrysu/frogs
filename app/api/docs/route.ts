@@ -159,7 +159,7 @@ const API_DOCUMENTATION = {
       description: 'Check API health status',
       response: {
         status: 'ok',
-        timestamp: 'ISO string'
+        date: 'YYYY-MM-DD'
       }
     }
   ],
