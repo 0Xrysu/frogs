@@ -1,6 +1,8 @@
+export const runtime = 'edge';
+
 import { NextResponse } from 'next/server';
 
-export async function GET() {
+export function GET() {
   const now = new Date();
 
   const date = now.getFullYear() + '-' +
