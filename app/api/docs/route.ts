@@ -151,17 +151,26 @@ const API_DOCUMENTATION = {
     {
       method: 'GET',
       path: '/docs',
-      description: 'Get API documentation'
+      description: 'Get API documentation',
+      errors: [
+        { code: 500, message: 'Failed to load documentation' }
+      ]
     },
-    {
+   {
       method: 'GET',
       path: '/health',
       description: 'Check API health status',
       response: {
         status: 'ok',
-        date: 'YYYY-MM-DD'
-      }
-    }
+        website: 'warm',
+        pinata: 'ok',
+        edge: 'cloudflare',
+        cache: 'YYYY-MM-DD HH:MM:SS'
+      },
+      errors: [
+        { code: 503, message: 'Service degraded or down' }
+     ]
+   }
   ],
 
   notes: {
